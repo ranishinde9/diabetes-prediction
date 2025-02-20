@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np  # Ensure numpy is imported
 import pandas as pd
 from sklearn.metrics import accuracy_score
+import os
 
 st.set_page_config(page_title="Diabetes Prediction", layout="wide", page_icon="🧑‍⚕")
 
@@ -53,7 +54,7 @@ st.markdown(
 )
 
 # Load the model
-diabetes_model_path = r"C:\Users\RANI SHINDE\OneDrive\Desktop\workshop2\diabetes_model.sav"
+diabetes_model_path = "diabetes_model.sav"
 try:
     with open(diabetes_model_path, 'rb') as model_file:
         diabetes_model = pickle.load(model_file)
